@@ -26,6 +26,7 @@ end
 get '/profile' do
   current_user(session[:id])
   redirect '/' if @current_user == nil
+  @current_session_id = session[:id]
   erb :profile
 end
 
