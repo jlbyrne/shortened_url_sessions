@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Welcome to URL Shortener!</h1>
+  <form class="create_url" action="/url_maker" method="post">
+    <input type="text" name="user_url">
+    <input type="submit" value="create url">
+  </form>
+
+  <p id="confirmation"></p>
+
+  <form class="user_login" action="/login" method='post'> Log in<br>
+    Email:    <input type="text" name="email"><br>
+    Password: <input type="password" name="password"><br>
+    <input type="submit" value="log in">
+  </form>
+
+  <form class="user_creation" action="/create_user" method="post"> Create Account:<br>
+    Email:    <input type="text" name="email"><br>
+    Username: <input type="text" name="username"><br>
+    Password: <input type="password" name="password"><br>
+    <input type="submit" value="create account">
+  </form> 
+
+</div>

@@ -1,0 +1,5 @@
+<% if @new_url.valid? %>
+  <p id="confirmation">Your new url is: <%= @short_url %></p>
+<% else %>
+  <p><%=@new_url.errors.full_messages.first%></p>
+<% end %>
