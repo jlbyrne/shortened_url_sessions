@@ -11,8 +11,8 @@ class Url < ActiveRecord::Base
       self.short_url = SecureRandom.base64(5)
     end
 
-    def update_counter
-      self.counter += 1
+    def add_user_id=(session_id)
+      self.user_id = session_id
       self.save
     end
 end

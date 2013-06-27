@@ -42,6 +42,8 @@ end
 
 post '/url_maker' do
   @new_url = Url.create(full_url: params[:user_url])
+  p "I'm the session id: #{session[:id]}"
+  @new_url.add_user_id = session[:id] if session[:id] != nil 
   @short_url = "localhost:9393/#{@new_url.short_url}"
   erb :_confirm_new_url, :layout => false
 end
